@@ -1,9 +1,16 @@
 package JonathanLange.CadastroDeNinjas.Missoes;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table (name = "tb_missoes")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class MissoesModel {
 
     @Id
@@ -15,28 +22,5 @@ public class MissoesModel {
     @OneToMany (mappedBy = "missoes")
     private List<NinjaModel> ninjas;
 
-    public MissoesModel() {
 
-    }
-
-    public MissoesModel(String nomeMissao, String dificuldade) {
-        this.nomeMissao = nomeMissao;
-        this.dificuldade = dificuldade;
-    }
-
-    public String getNomeMissao() {
-        return nomeMissao;
-    }
-
-    public void setNomeMissao(String nomeMissao) {
-        this.nomeMissao = nomeMissao;
-    }
-
-    public String getDificuldade() {
-        return dificuldade;
-    }
-
-    public void setDificuldade(String dificuldade) {
-        this.dificuldade = dificuldade;
-    }
 }
