@@ -1,5 +1,6 @@
 package JonathanLange.CadastroDeNinjas.Ninjas;
 
+import JonathanLange.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
